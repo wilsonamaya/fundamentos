@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float parcial1,parcial2, parcial3, exfinal, proyectofinal, notafinal;
+    int n=1,c=0;
+    
+    cout<<"Ingrese el numero de estudiantes:";
+    cin>>n;
+    
+    while (n>=c){
+        cout<<"Ingrese la nota del primer parcial:";
+        cin>>parcial1;
+        cout<<"Ingrese la nota del segundo parcial:";
+        cin>>parcial2;
+        cout<<"Ingrese la nota del tercer parcial:";
+        cin>>parcial3;
+        cout<<"Ingrese la nota del examen final:";
+        cin>>exfinal;
+        cout<<"Ingrese la nota de proyecto final:";
+        cin>>proyectofinal;
+        notafinal=((parcial1+parcial2+parcial3)/3)*0.4+exfinal*0.4+proyectofinal*0.2;
+        cout<<"La nota final del alumno es:"<<notafinal<<endl;
+        c=c+1;
+    }
+
+    return 0;
+}
