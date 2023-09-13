@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float pa, pt, pp, pg;
+    
+    cout<<"Ingrese el presupuesto anual: ";
+    cin>>pa;
+    
+    pt=pa*0.3;
+    pp=pa*0.4;
+    pg=pa*0.4;
+    
+    cout<<"El presupuesto que le corresponde al area de traumatologia es:"<<pt<<endl;
+    cout<<"El presupuesto que le corresponde al area de pediatria es:"<<pp<<endl;
+    cout<<"El presupuesto que le corresponde al area de ginecologia es:"<<pg<<endl;
+    
+    return 0;
+}
