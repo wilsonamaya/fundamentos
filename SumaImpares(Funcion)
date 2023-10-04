@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int sumaimpares(int n);
+
+int main()
+{
+    int n;
+    cout<<"Ingrese n: ";
+    cin>>n;
+    cout<<"La suma total es: "<<sumaimpares(n);
+
+    return 0;
+}
+
+int sumaimpares(int n)
+{
+    int sumatotal=0;
+    
+    for (int i=1;i<=n;i+=2){
+        
+        sumatotal=sumatotal+i;
+    }
+    
+    
+    return sumatotal;
+}
