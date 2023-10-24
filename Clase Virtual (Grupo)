@@ -1,0 +1,51 @@
+//Ejercicio 7
+//Autores: Wilson Amaya, Juan Diego Nuñez
+
+#include <iostream>
+using namespace std;
+
+void cargarNumero(int &numero);
+void mostrarResultado(int numero);
+
+string unidades[] = {"", "UNO", "DOS", "TRES", "CUATRO", "CINCO", "SEIS", "SIETE", "OCHO", "NUEVE"};
+string decenas[] = {"", "DIEZ", "VEINTE", "TREINTA", "CUARENTA", "CINCUENTA", "SESENTA", "SETENTA", "OCHENTA", "NOVENTA"};
+
+
+int main() {
+    int num;
+    cargarNumero(num);
+
+    if (num >= 1 && num <= 100) {
+        mostrarResultado(num);
+    } else {
+        cout << "Número fuera de rango." << endl;
+    }
+
+    return 0;
+}
+
+string convertirLiteral(int num) {
+    if (num >= 1 && num <= 9) {
+        return unidades[num];
+    } else if (num % 10 == 0 && num <= 90) {
+        return decenas[num / 10];
+    } else if (num >= 11 && num <= 19) {
+        return "DIECI" + unidades[num - 10];
+    } else if (num >= 21 && num <= 99) {
+        return decenas[num / 10] + (num % 10 != 0 ? (" Y " + unidades[num % 10]) : "");
+    } else if (num == 100) {
+        return "CIEN";
+    }
+    return "Número fuera de rango";
+}
+
+void cargarNumero(int &numero) {
+    cout << "Ingrese un número (1-100): ";
+    cin >> numero;
+}
+
+void mostrarResultado(int numero) {
+    cout << "Representación literal: " << convertirLiteral(numero) << endl;
+}
+
+
