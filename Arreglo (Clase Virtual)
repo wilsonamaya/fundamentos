@@ -1,0 +1,58 @@
+#include <iostream>
+#define MAX 100
+
+using namespace std;
+
+void cargar(double a[], int tamaño);
+void mostrar (double a[], int tamaño);
+double promedio (double a[], int tamaño);
+
+
+int main()
+{
+    int n;
+    double vec[MAX];
+    
+    //Validar la entrada
+    do{
+        cout<<"Ingresar numero de elementos: ";
+        cin>>n;
+    }while((n<0)||(n>MAX));
+    cargar(vec,n);
+    cout<<"El promedio de los elementos del vector es: "<<promedio(vec,n);
+    cout<<endl<<"para el vector";
+    mostrar(vec,n);
+    
+
+    return 0;
+}
+
+void cargar(double a[], int tamaño)
+{
+    // Pide los elementos del vector o arreglo
+    for (int i=0;i<tamaño;i++){
+        cout<<"Ingresa el elemento "<<i<<" : ";
+        cin>>a[i];
+        
+    }
+    
+    
+    
+}
+void mostrar (double a[], int tamaño)
+{
+    
+    for (int i=0;i<tamaño;i++)
+    cout<<a[i];
+    
+}
+double promedio (double a[], int tamaño)
+{
+    double suma=0;
+    for (int i=0; i<tamaño; i++)
+    suma+=a[i];
+    return suma/tamaño;
+    
+    
+    
+}
